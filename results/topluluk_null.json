@@ -1,0 +1,836 @@
+{
+  "louvain": {
+    "modularite_ort": 0.589817741817362,
+    "modularite_std": 0.0024707616316446647,
+    "topluluk_sayisi": [
+      17,
+      18,
+      21,
+      18,
+      17,
+      18,
+      18,
+      20,
+      19,
+      18
+    ],
+    "nmi_ort": 0.6701927223965798,
+    "nmi_min": 0.5968689542112897,
+    "ari_ort": 0.5990426996700098,
+    "ari_min": 0.5096241869830755
+  },
+  "leiden": {
+    "modularite_ort": 0.5953757625300987,
+    "modularite_std": 0.00189991115567644,
+    "topluluk_sayisi": [
+      18,
+      19,
+      17,
+      19,
+      19,
+      19,
+      18,
+      18,
+      19,
+      18
+    ],
+    "nmi_ort": 0.6790170321327823,
+    "nmi_min": 0.5906238654880017,
+    "ari_ort": 0.6088298828124461,
+    "ari_min": 0.5350655576212147
+  },
+  "louvain_leiden_ayni_tohum_nmi_ort": 0.6495428458262198,
+  "louvain_leiden_ayni_tohum_ari_ort": 0.574119377691022,
+  "referans": {
+    "algoritma": "leiden",
+    "tohum": 3,
+    "modularite": 0.5987066810719459,
+    "topluluk_sayisi": 19
+  },
+  "en_buyuk_topluluklar": [
+    {
+      "topluluk": 0,
+      "boyut": 388,
+      "pay": 0.2161559888579387,
+      "film_yili_medyan": 2011.0,
+      "film_yili_q1_q3": [
+        2006.0,
+        2016.0
+      ],
+      "kariyer_baslangic_medyan": 2009.0,
+      "en_bagli_10": [
+        {
+          "ad": "Altan Erkekli",
+          "derece": 134,
+          "ilk_yil": 2001,
+          "son_yil": 2020
+        },
+        {
+          "ad": "Ahmet Mümtaz Taylan",
+          "derece": 132,
+          "ilk_yil": 2004,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Nejat İşler",
+          "derece": 103,
+          "ilk_yil": 2004,
+          "son_yil": 2024
+        },
+        {
+          "ad": "Taner Birsel",
+          "derece": 96,
+          "ilk_yil": 2001,
+          "son_yil": 2024
+        },
+        {
+          "ad": "Cengiz Bozkurt",
+          "derece": 85,
+          "ilk_yil": 2007,
+          "son_yil": 2022
+        },
+        {
+          "ad": "Yılmaz Erdoğan",
+          "derece": 82,
+          "ilk_yil": 2001,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Belçim Bilgin",
+          "derece": 81,
+          "ilk_yil": 2009,
+          "son_yil": 2018
+        },
+        {
+          "ad": "Çetin Tekindor",
+          "derece": 79,
+          "ilk_yil": 1984,
+          "son_yil": 2017
+        },
+        {
+          "ad": "Cem Yılmaz",
+          "derece": 78,
+          "ilk_yil": 1998,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Hümeyra Akbay",
+          "derece": 77,
+          "ilk_yil": 1980,
+          "son_yil": 2014
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q3472837",
+          "film_adi": "Anlat İstanbul",
+          "yil": 2005,
+          "uye_oyuncu": 19
+        },
+        {
+          "film_qid": "Q6094757",
+          "film_adi": "Uzun Hikaye",
+          "yil": 2012,
+          "uye_oyuncu": 18
+        },
+        {
+          "film_qid": "Q12208610",
+          "film_adi": "Kelebeğin Rüyası",
+          "yil": 2013,
+          "uye_oyuncu": 17
+        },
+        {
+          "film_qid": "Q367228",
+          "film_adi": "Av Mevsimi",
+          "yil": 2010,
+          "uye_oyuncu": 15
+        },
+        {
+          "film_qid": "Q639070",
+          "film_adi": "Organize İşler",
+          "yil": 2005,
+          "uye_oyuncu": 15
+        },
+        {
+          "film_qid": "Q6070309",
+          "film_adi": "Dedemin İnsanları",
+          "yil": 2011,
+          "uye_oyuncu": 14
+        },
+        {
+          "film_qid": "Q4808148",
+          "film_adi": "Aşk Tesadüfleri Sever",
+          "yil": 2011,
+          "uye_oyuncu": 13
+        },
+        {
+          "film_qid": "Q797577",
+          "film_adi": "Babam ve Oğlum",
+          "yil": 2005,
+          "uye_oyuncu": 13
+        }
+      ]
+    },
+    {
+      "topluluk": 1,
+      "boyut": 376,
+      "pay": 0.20947075208913649,
+      "film_yili_medyan": 1973.0,
+      "film_yili_q1_q3": [
+        1966.0,
+        1980.0
+      ],
+      "kariyer_baslangic_medyan": 1969.0,
+      "en_bagli_10": [
+        {
+          "ad": "Cüneyt Arkın",
+          "derece": 239,
+          "ilk_yil": 1964,
+          "son_yil": 2014
+        },
+        {
+          "ad": "Nubar Terziyan",
+          "derece": 103,
+          "ilk_yil": 1951,
+          "son_yil": 1981
+        },
+        {
+          "ad": "Türkân Şoray",
+          "derece": 99,
+          "ilk_yil": 1961,
+          "son_yil": 2007
+        },
+        {
+          "ad": "Turgut Özatay",
+          "derece": 95,
+          "ilk_yil": 1952,
+          "son_yil": 1989
+        },
+        {
+          "ad": "Ali Şen",
+          "derece": 73,
+          "ilk_yil": 1962,
+          "son_yil": 1986
+        },
+        {
+          "ad": "Yıldırım Gencer",
+          "derece": 72,
+          "ilk_yil": 1967,
+          "son_yil": 1989
+        },
+        {
+          "ad": "Kadir İnanır",
+          "derece": 69,
+          "ilk_yil": 1970,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Hüseyin Zan",
+          "derece": 66,
+          "ilk_yil": 1966,
+          "son_yil": 1980
+        },
+        {
+          "ad": "Erol Taş",
+          "derece": 66,
+          "ilk_yil": 1959,
+          "son_yil": 1986
+        },
+        {
+          "ad": "Hakkı Kıvanç",
+          "derece": 64,
+          "ilk_yil": 1971,
+          "son_yil": 1983
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q6082474",
+          "film_adi": "Köroğlu",
+          "yil": 1968,
+          "uye_oyuncu": 13
+        },
+        {
+          "film_qid": "Q105748692",
+          "film_adi": "Belalı tatil",
+          "yil": 1975,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q14757056",
+          "film_adi": "Fadime",
+          "yil": 1970,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q6098651",
+          "film_adi": "Bir Demet Menekşe",
+          "yil": 1973,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q76332025",
+          "film_adi": "Hicran Sokağı",
+          "yil": 2007,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q3561666",
+          "film_adi": "White Fire",
+          "yil": 1984,
+          "uye_oyuncu": 10
+        },
+        {
+          "film_qid": "Q3599003",
+          "film_adi": "Süpermenler",
+          "yil": 1979,
+          "uye_oyuncu": 10
+        },
+        {
+          "film_qid": "Q654767",
+          "film_adi": "Hedef (film)",
+          "yil": 1979,
+          "uye_oyuncu": 10
+        }
+      ]
+    },
+    {
+      "topluluk": 2,
+      "boyut": 185,
+      "pay": 0.10306406685236769,
+      "film_yili_medyan": 1986.0,
+      "film_yili_q1_q3": [
+        1979.0,
+        2005.0
+      ],
+      "kariyer_baslangic_medyan": 1993.0,
+      "en_bagli_10": [
+        {
+          "ad": "Şener Şen",
+          "derece": 107,
+          "ilk_yil": 1973,
+          "son_yil": 2017
+        },
+        {
+          "ad": "İsmail Hacıoğlu",
+          "derece": 107,
+          "ilk_yil": 2001,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Cezmi Baskın",
+          "derece": 99,
+          "ilk_yil": 1988,
+          "son_yil": 2018
+        },
+        {
+          "ad": "Kemal Sunal",
+          "derece": 82,
+          "ilk_yil": 1972,
+          "son_yil": 1999
+        },
+        {
+          "ad": "Tuncel Kurtiz",
+          "derece": 77,
+          "ilk_yil": 1966,
+          "son_yil": 2013
+        },
+        {
+          "ad": "Tarık Akan",
+          "derece": 74,
+          "ilk_yil": 1971,
+          "son_yil": 2009
+        },
+        {
+          "ad": "Mustafa Turan",
+          "derece": 65,
+          "ilk_yil": 2002,
+          "son_yil": 2022
+        },
+        {
+          "ad": "Ruhi Sarı",
+          "derece": 65,
+          "ilk_yil": 2002,
+          "son_yil": 2018
+        },
+        {
+          "ad": "Münir Özkul",
+          "derece": 59,
+          "ilk_yil": 1950,
+          "son_yil": 1989
+        },
+        {
+          "ad": "Devin Özgür Çınar",
+          "derece": 52,
+          "ilk_yil": 2002,
+          "son_yil": 2017
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q6100587",
+          "film_adi": "Hiçbiryerde",
+          "yil": 2002,
+          "uye_oyuncu": 20
+        },
+        {
+          "film_qid": "Q928436",
+          "film_adi": "Kabadayı",
+          "yil": 2007,
+          "uye_oyuncu": 13
+        },
+        {
+          "film_qid": "Q276243",
+          "film_adi": "Akrebin Yolculuğu",
+          "yil": 1997,
+          "uye_oyuncu": 12
+        },
+        {
+          "film_qid": "Q3137286",
+          "film_adi": "Beyaz Melek",
+          "yil": 2007,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q111955137",
+          "film_adi": "Kurak Günler",
+          "yil": 2022,
+          "uye_oyuncu": 10
+        },
+        {
+          "film_qid": "Q6084591",
+          "film_adi": "Düttürü Dünya",
+          "yil": 1988,
+          "uye_oyuncu": 10
+        },
+        {
+          "film_qid": "Q1033926",
+          "film_adi": "Arabesk",
+          "yil": 1989,
+          "uye_oyuncu": 8
+        },
+        {
+          "film_qid": "Q5626835",
+          "film_adi": "Gülen Gözler",
+          "yil": 1977,
+          "uye_oyuncu": 8
+        }
+      ]
+    },
+    {
+      "topluluk": 3,
+      "boyut": 164,
+      "pay": 0.09136490250696379,
+      "film_yili_medyan": 2011.0,
+      "film_yili_q1_q3": [
+        2005.0,
+        2016.0
+      ],
+      "kariyer_baslangic_medyan": 2011.0,
+      "en_bagli_10": [
+        {
+          "ad": "Haluk Bilginer",
+          "derece": 121,
+          "ilk_yil": 1990,
+          "son_yil": 2025
+        },
+        {
+          "ad": "Mehmet Ali Erbil",
+          "derece": 52,
+          "ilk_yil": 1995,
+          "son_yil": 2024
+        },
+        {
+          "ad": "Demet Evgâr",
+          "derece": 49,
+          "ilk_yil": 2006,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Şevket Çoruh",
+          "derece": 49,
+          "ilk_yil": 2003,
+          "son_yil": 2018
+        },
+        {
+          "ad": "Haldun Boysan",
+          "derece": 49,
+          "ilk_yil": 1998,
+          "son_yil": 2017
+        },
+        {
+          "ad": "Gülse Birsel",
+          "derece": 48,
+          "ilk_yil": 2005,
+          "son_yil": 2022
+        },
+        {
+          "ad": "Ezel Akay",
+          "derece": 48,
+          "ilk_yil": 2001,
+          "son_yil": 2017
+        },
+        {
+          "ad": "Rıza Akın",
+          "derece": 46,
+          "ilk_yil": 2007,
+          "son_yil": 2017
+        },
+        {
+          "ad": "Ahu Türkpençe",
+          "derece": 45,
+          "ilk_yil": 2004,
+          "son_yil": 2018
+        },
+        {
+          "ad": "Engin Günaydın",
+          "derece": 43,
+          "ilk_yil": 2001,
+          "son_yil": 2017
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q1220120",
+          "film_adi": "Hırsız Var!",
+          "yil": 2005,
+          "uye_oyuncu": 19
+        },
+        {
+          "film_qid": "Q38081888",
+          "film_adi": "Aile Arasında",
+          "yil": 2017,
+          "uye_oyuncu": 16
+        },
+        {
+          "film_qid": "Q7993102",
+          "film_adi": "Neredesin Firuze",
+          "yil": 2004,
+          "uye_oyuncu": 16
+        },
+        {
+          "film_qid": "Q116035959",
+          "film_adi": "Yılbaşı Gecesi",
+          "yil": 2022,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q21787529",
+          "film_adi": "Ertuğrul 1890",
+          "yil": 2015,
+          "uye_oyuncu": 7
+        },
+        {
+          "film_qid": "Q21932000",
+          "film_adi": "Dedemin Fişi",
+          "yil": 2016,
+          "uye_oyuncu": 7
+        },
+        {
+          "film_qid": "Q85974844",
+          "film_adi": "Mevlana Mesti Aşk",
+          "yil": 2024,
+          "uye_oyuncu": 7
+        },
+        {
+          "film_qid": "Q112829122",
+          "film_adi": "Aşkın Kıyameti",
+          "yil": 2022,
+          "uye_oyuncu": 6
+        }
+      ]
+    },
+    {
+      "topluluk": 4,
+      "boyut": 103,
+      "pay": 0.05738161559888579,
+      "film_yili_medyan": 2008.0,
+      "film_yili_q1_q3": [
+        1995.0,
+        2013.5
+      ],
+      "kariyer_baslangic_medyan": 2007.0,
+      "en_bagli_10": [
+        {
+          "ad": "Uğur Polat",
+          "derece": 96,
+          "ilk_yil": 1988,
+          "son_yil": 2015
+        },
+        {
+          "ad": "Selma Ergeç",
+          "derece": 49,
+          "ilk_yil": 2006,
+          "son_yil": 2024
+        },
+        {
+          "ad": "Yetkin Dikinciler",
+          "derece": 46,
+          "ilk_yil": 2005,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Suna Selen",
+          "derece": 45,
+          "ilk_yil": 1987,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Turgay Tanülkü",
+          "derece": 41,
+          "ilk_yil": 2007,
+          "son_yil": 2013
+        },
+        {
+          "ad": "İlyas Salman",
+          "derece": 40,
+          "ilk_yil": 1977,
+          "son_yil": 2007
+        },
+        {
+          "ad": "Ayten Uncuoğlu",
+          "derece": 39,
+          "ilk_yil": 2007,
+          "son_yil": 2013
+        },
+        {
+          "ad": "Itır Esen",
+          "derece": 38,
+          "ilk_yil": 1977,
+          "son_yil": 2007
+        },
+        {
+          "ad": "Yaman Tarcan",
+          "derece": 37,
+          "ilk_yil": 1990,
+          "son_yil": 2007
+        },
+        {
+          "ad": "Oktay Kaynarca",
+          "derece": 32,
+          "ilk_yil": 1997,
+          "son_yil": 2007
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q6093097",
+          "film_adi": "Sis ve Gece",
+          "yil": 2007,
+          "uye_oyuncu": 19
+        },
+        {
+          "film_qid": "Q6078936",
+          "film_adi": "Güzel Günler Göreceğiz",
+          "yil": 2012,
+          "uye_oyuncu": 10
+        },
+        {
+          "film_qid": "Q22814261",
+          "film_adi": "Gelmeyen Bahar",
+          "yil": 2013,
+          "uye_oyuncu": 9
+        },
+        {
+          "film_qid": "Q113675166",
+          "film_adi": "Q113675166",
+          "yil": 2012,
+          "uye_oyuncu": 8
+        },
+        {
+          "film_qid": "Q85977050",
+          "film_adi": "Ölürayak",
+          "yil": 1990,
+          "uye_oyuncu": 8
+        },
+        {
+          "film_qid": "Q50380279",
+          "film_adi": "Badi",
+          "yil": 1983,
+          "uye_oyuncu": 7
+        },
+        {
+          "film_qid": "Q6054839",
+          "film_adi": "Günah Keçisi",
+          "yil": 2011,
+          "uye_oyuncu": 7
+        },
+        {
+          "film_qid": "Q6070492",
+          "film_adi": "Çilekli Pasta",
+          "yil": 2000,
+          "uye_oyuncu": 7
+        }
+      ]
+    },
+    {
+      "topluluk": 6,
+      "boyut": 96,
+      "pay": 0.053481894150417826,
+      "film_yili_medyan": 2010.0,
+      "film_yili_q1_q3": [
+        2005.0,
+        2013.75
+      ],
+      "kariyer_baslangic_medyan": 2004.0,
+      "en_bagli_10": [
+        {
+          "ad": "Güven Kıraç",
+          "derece": 144,
+          "ilk_yil": 1997,
+          "son_yil": 2019
+        },
+        {
+          "ad": "Numan Acar",
+          "derece": 78,
+          "ilk_yil": 2004,
+          "son_yil": 2014
+        },
+        {
+          "ad": "Adam Bousdoukos",
+          "derece": 72,
+          "ilk_yil": 2000,
+          "son_yil": 2014
+        },
+        {
+          "ad": "İdil Üner",
+          "derece": 66,
+          "ilk_yil": 2000,
+          "son_yil": 2007
+        },
+        {
+          "ad": "Nursel Köse",
+          "derece": 64,
+          "ilk_yil": 1988,
+          "son_yil": 2011
+        },
+        {
+          "ad": "Sibel Kekilli",
+          "derece": 62,
+          "ilk_yil": 2004,
+          "son_yil": 2024
+        },
+        {
+          "ad": "Birol Ünel",
+          "derece": 55,
+          "ilk_yil": 2000,
+          "son_yil": 2005
+        },
+        {
+          "ad": "Cem Akın",
+          "derece": 52,
+          "ilk_yil": 2000,
+          "son_yil": 2004
+        },
+        {
+          "ad": "Mehmet Kurtuluş",
+          "derece": 52,
+          "ilk_yil": 2000,
+          "son_yil": 2025
+        },
+        {
+          "ad": "Meltem Cumbul",
+          "derece": 47,
+          "ilk_yil": 1999,
+          "son_yil": 2014
+        }
+      ],
+      "en_cok_uyeli_filmler": [
+        {
+          "film_qid": "Q567579",
+          "film_adi": "Kebab Connection",
+          "yil": 2004,
+          "uye_oyuncu": 24
+        },
+        {
+          "film_qid": "Q17512617",
+          "film_adi": "Kesik",
+          "yil": 2014,
+          "uye_oyuncu": 23
+        },
+        {
+          "film_qid": "Q325648",
+          "film_adi": "Duvara Karşı",
+          "yil": 2004,
+          "uye_oyuncu": 23
+        },
+        {
+          "film_qid": "Q494719",
+          "film_adi": "Temmuz'da",
+          "yil": 2000,
+          "uye_oyuncu": 16
+        },
+        {
+          "film_qid": "Q705871",
+          "film_adi": "Yaşamın Kıyısında",
+          "yil": 2007,
+          "uye_oyuncu": 11
+        },
+        {
+          "film_qid": "Q6692252",
+          "film_adi": "Gönül Yarası",
+          "yil": 2005,
+          "uye_oyuncu": 8
+        },
+        {
+          "film_qid": "Q2599661",
+          "film_adi": "Yasemin (film)",
+          "yil": 1988,
+          "uye_oyuncu": 6
+        },
+        {
+          "film_qid": "Q21000942",
+          "film_adi": "Şarkı Söyleyen Kadınlar",
+          "yil": 2013,
+          "uye_oyuncu": 5
+        }
+      ]
+    }
+  ],
+  "null_model": {
+    "yontem": "Viger-Latapy configuration model (aynı derece dizisi, basit, bağlı)",
+    "adet": 100,
+    "olcular": {
+      "transitivity": {
+        "gozlenen": 0.3412612684563089,
+        "null_ort": 0.03617748005870079,
+        "null_std": 0.0006993487332848374,
+        "z": 436.2398527050033,
+        "null_min": 0.03481915562699039,
+        "null_maks": 0.037562519342311494
+      },
+      "ortalama_yerel_kumelenme": {
+        "gozlenen": 0.7108098623192465,
+        "null_ort": 0.03823879717687015,
+        "null_std": 0.001530641049858022,
+        "z": 439.40482662787736,
+        "null_min": 0.03437386847881443,
+        "null_maks": 0.042607620877216285
+      },
+      "ortalama_yol": {
+        "gozlenen": 3.442049170400872,
+        "null_ort": 2.9214979923794253,
+        "null_std": 0.004366451723825444,
+        "z": 119.21606167796864,
+        "null_min": 2.909656142573667,
+        "null_maks": 2.931665750583033
+      },
+      "modularite_louvain": {
+        "gozlenen": 0.5907028584459273,
+        "null_ort": 0.20349750488919371,
+        "null_std": 0.0020540036998787643,
+        "z": 188.51249079034667,
+        "null_min": 0.1980029089883883,
+        "null_maks": 0.20841253900167486
+      },
+      "assortativity": {
+        "gozlenen": 0.018576848551401307,
+        "null_ort": -0.033335292422860666,
+        "null_std": 0.005529960361612385,
+        "z": 9.387434552808587,
+        "null_min": -0.04665665585896348,
+        "null_maks": -0.01862401096747492
+      }
+    }
+  }
+}

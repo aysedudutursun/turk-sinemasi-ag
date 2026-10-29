@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Türk Sineması Oyuncu Ağı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --panel:#fffdf9; --ink:#1d1b18; --muted:#6b645b; --line:#e3ddd3;
+  --accent:#b23a2b; --chip:#efe9df; --edge:rgba(60,50,40,.10); --shadow:0 6px 24px rgba(40,30,20,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121110; --panel:#1b1a18; --ink:#efe9df; --muted:#a39a8e; --line:#2e2b27;
+    --accent:#e2694f; --chip:#26241f; --edge:rgba(240,230,215,.08); --shadow:0 6px 24px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121110; --panel:#1b1a18; --ink:#efe9df; --muted:#a39a8e; --line:#2e2b27;
+  --accent:#e2694f; --chip:#26241f; --edge:rgba(240,230,215,.08); --shadow:0 6px 24px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,system-ui,sans-serif}
+.app{display:grid;grid-template-columns:320px 1fr;height:100vh}
+aside{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+header{padding:18px 18px 12px;border-bottom:1px solid var(--line)}
+h1{font:600 20px/1.15 Fraunces,Georgia,serif;margin:0 0 4px}
+.sub{color:var(--muted);font-size:12px}
+.row{display:flex;gap:8px;align-items:center;margin-top:10px}
+.lang button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:3px 9px;border-radius:999px;cursor:pointer;font:500 12px Inter}
+.lang button.on{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.search{position:relative;padding:12px 18px;border-bottom:1px solid var(--line)}
+.search input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:14px Inter}
+.sug{position:absolute;left:18px;right:18px;top:52px;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);z-index:5;max-height:260px;overflow:auto;display:none}
+.sug div{padding:7px 11px;cursor:pointer}
+.sug div:hover,.sug div.act{background:var(--chip)}
+.scroll{overflow:auto;flex:1;min-height:0}
+section{padding:14px 18px;border-bottom:1px solid var(--line)}
+h2{font:600 11px Inter;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.com{display:flex;align-items:center;gap:8px;padding:5px 6px;border-radius:6px;cursor:pointer;user-select:none}
+.com:hover{background:var(--chip)}
+.com .sw{width:12px;height:12px;border-radius:3px;flex:none}
+.com .nm{flex:1}
+.com .ct{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.com.off{opacity:.35}
+.lnk{font-size:12px;color:var(--accent);cursor:pointer;background:none;border:0;padding:0;margin-right:10px}
+#detail .empty{color:var(--muted)}
+.dname{font:600 18px/1.2 Fraunces,Georgia,serif;margin:0 0 2px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.kv div{background:var(--chip);border-radius:8px;padding:8px}
+.kv b{display:block;font:600 16px Inter;font-variant-numeric:tabular-nums}
+.kv span{font-size:11px;color:var(--muted)}
+ul{margin:4px 0 0;padding-left:16px}
+li{margin:2px 0}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+#graph{position:relative;min-width:0}
+#sig{position:absolute;inset:0}
+.foot{position:absolute;left:12px;bottom:10px;font-size:11px;color:var(--muted);background:var(--panel);padding:6px 9px;border-radius:6px;border:1px solid var(--line);max-width:calc(100% - 24px)}
+a{color:var(--accent)}
+@media (max-width:760px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 60vh}
+  aside{order:2;border-right:0;border-top:1px solid var(--line)}
+  #graph{order:1;min-height:60vh}
+  header,.search,section{padding-left:16px;padding-right:16px}
+  .sug{left:16px;right:16px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <header>
+      <h1 data-i="title">Türk Sineması Oyuncu Ağı</h1>
+      <div class="sub" data-i="subtitle"></div>
+      <div class="row lang"><button data-l="tr" class="on">TR</button><button data-l="en">EN</button></div>
+    </header>
+    <div class="search">
+      <input id="q" autocomplete="off" data-ip="search">
+      <div class="sug" id="sug"></div>
+    </div>
+    <div class="scroll">
+      <section id="detail"><div class="empty" data-i="hint"></div></section>
+      <section>
+        <h2 data-i="communities"></h2>
+        <div><button class="lnk" id="all" data-i="all"></button><button class="lnk" id="none" data-i="none"></button></div>
+        <div id="coms"></div>
+      </section>
+    </div>
+  </aside>
+  <main id="graph"><div id="sig"></div><div class="foot" id="foot"></div></main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/graphology@0.25.4/dist/graphology.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sigma@2.4.0/build/sigma.min.js"></script>
+<script>
+const DATA = /*__VERI__*/null;
+const PAL = ["#c0392b","#2874a6","#239b56","#d68910","#7d3c98","#d63384","#17a589","#6e2c00","#5d6d7e","#1abc9c","#7e5109","#34495e"];
+const T = {
+  tr:{title:"Türk Sineması Oyuncu Ağı",subtitle:"Wikidata · Türk yapımı filmler 1950–2025 · Bağ = aynı filmde oynamak",
+      search:"Oyuncu ara…",hint:"Bir oyuncuya tıklayın veya arayın. Kenarlar ortak filmleri gösterir.",
+      communities:"Topluluklar (Leiden)",all:"Tümü",none:"Hiçbiri",films:"film",degree:"Birlikte oynadığı oyuncu",
+      filmcount:"Film sayısı",active:"Aktif yıllar",rank:"Sıra",costars:"En sık birlikte oynadıkları",
+      sample:"Filmlerinden örnekler",rdeg:"Derece sırası",rbet:"Köprü (betweenness) sırası",rpr:"PageRank sırası",
+      foot:(a,b,c,d)=>`Gösterilen: ${a} oyuncu, ${b} bağ (en bağlantılı oyuncular). Tüm ağ: ${c} oyuncu, ${d} bağ. Sayılar tüm ağdan hesaplandı.`,
+      times:"kez",wd:"Wikidata'da aç"},
+  en:{title:"Turkish Cinema Actor Network",subtitle:"Wikidata · Turkish films 1950–2025 · Tie = appearing in the same film",
+      search:"Search actor…",hint:"Click or search for an actor. Edges show shared films.",
+      communities:"Communities (Leiden)",all:"All",none:"None",films:"films",degree:"Distinct co-stars",
+      filmcount:"Films",active:"Active years",rank:"Rank",costars:"Most frequent co-stars",
+      sample:"Sample films",rdeg:"Degree rank",rbet:"Bridge (betweenness) rank",rpr:"PageRank rank",
+      foot:(a,b,c,d)=>`Shown: ${a} actors, ${b} ties (most connected actors). Full network: ${c} actors, ${d} ties. Figures computed on the full network.`,
+      times:"×",wd:"Open in Wikidata"}
+};
+let lang="tr"; try{lang=localStorage.getItem("tsag-lang")||"tr"}catch(e){}
+const comById={}; DATA.communities.forEach((c,i)=>{c.color=PAL[i%PAL.length];comById[c.id]=c});
+const color=c=>comById[c]?comById[c].color:"#9a948a";
+const active=new Set(DATA.communities.map(c=>c.id));
+const g=new graphology.Graph();
+const maxD=Math.max(...DATA.nodes.map(n=>n.d));
+DATA.nodes.forEach(n=>g.addNode(n.id,{label:n.label,x:n.x,y:n.y,size:2+10*Math.sqrt(n.d/maxD),color:color(n.c),raw:n}));
+DATA.edges.forEach(([a,b,w])=>{if(!g.hasEdge(a,b))g.addEdge(a,b,{size:Math.min(.3+w*.25,3),w})});
+let sel=null, hover=null;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const r=new Sigma(g,document.getElementById("sig"),{
+  labelRenderedSizeThreshold:7, labelFont:"Inter", labelColor:{color:css("--ink")}, defaultEdgeColor:css("--edge"),
+  nodeReducer:(id,a)=>{
+    const n=a.raw, res={...a};
+    if(n.c>=0 && !active.has(n.c)){res.hidden=true;return res}
+    const focus=sel||hover;
+    if(focus){ if(id===focus||g.areNeighbors(id,focus)){res.zIndex=1; if(id===focus){res.highlighted=true;res.forceLabel=true}} else {res.color=css("--line");res.label=""} }
+    return res},
+  edgeReducer:(e,a)=>{
+    const [s,t]=g.extremities(e), res={...a};
+    const hs=n=>{const c=g.getNodeAttribute(n,"raw").c;return c>=0&&!active.has(c)};
+    if(hs(s)||hs(t)){res.hidden=true;return res}
+    const focus=sel||hover;
+    if(focus){ if(s===focus||t===focus){res.color=css("--accent");res.size=Math.max(a.size,.8)} else res.hidden=true }
+    return res}
+});
+r.on("enterNode",({node})=>{hover=node;r.refresh()});
+r.on("leaveNode",()=>{hover=null;r.refresh()});
+r.on("clickNode",({node})=>select(node));
+r.on("clickStage",()=>{sel=null;renderDetail();r.refresh()});
+function select(id,fly){
+  sel=id; renderDetail(); r.refresh();
+  if(fly){const d=r.getNodeDisplayData(id); if(d) r.getCamera().animate({x:d.x,y:d.y,ratio:.25},{duration:600})}
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function renderDetail(){
+  const L=T[lang], box=document.getElementById("detail");
+  if(!sel){box.innerHTML=`<div class="empty">${L.hint}</div>`;return}
+  const n=g.getNodeAttribute(sel,"raw"), c=comById[n.c];
+  box.innerHTML=`<div class="dname">${esc(n.label)}</div>
+   ${c?`<div class="badge"><span class="sw" style="width:10px;height:10px;border-radius:3px;background:${c.color};display:inline-block"></span>${esc(c[lang])}</div>`:""}
+   <div class="kv">
+    <div><b>${n.f}</b><span>${L.filmcount}</span></div>
+    <div><b>${n.d}</b><span>${L.degree}</span></div>
+    <div><b>${n.y0}–${n.y1}</b><span>${L.active}</span></div>
+    <div><b>#${n.rb}</b><span>${L.rbet}</span></div>
+    <div><b>#${n.rd}</b><span>${L.rdeg}</span></div>
+    <div><b>#${n.rp}</b><span>${L.rpr}</span></div>
+   </div>
+   <h2>${L.costars}</h2><ul>${n.co.map(([a,w])=>`<li>${esc(a)} <span class="sub">(${w} ${L.films})</span></li>`).join("")}</ul>
+   <h2 style="margin-top:12px">${L.sample}</h2><ul>${n.fl.map(([a,y])=>`<li>${esc(a)} <span class="sub">${y}</span></li>`).join("")}</ul>
+   <p><a href="https://www.wikidata.org/wiki/${esc(n.id)}" target="_blank" rel="noopener">${L.wd} ↗</a></p>`;
+}
+function renderComs(){
+  const L=T[lang], box=document.getElementById("coms");
+  box.innerHTML=DATA.communities.map(c=>`<div class="com ${active.has(c.id)?"":"off"}" data-c="${c.id}"><span class="sw" style="background:${c.color}"></span><span class="nm">${esc(c[lang])}</span><span class="ct">${c.n}</span></div>`).join("");
+  box.querySelectorAll(".com").forEach(el=>el.onclick=()=>{const id=+el.dataset.c; active.has(id)?active.delete(id):active.add(id); renderComs(); r.refresh()});
+}
+function applyLang(){
+  const L=T[lang]; document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i]").forEach(el=>el.textContent=L[el.dataset.i]);
+  document.querySelectorAll("[data-ip]").forEach(el=>el.placeholder=L[el.dataset.ip]);
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));
+  document.title=L.title;
+  const m=DATA.meta; document.getElementById("foot").textContent=L.foot(m.n_show.toLocaleString(lang),m.m_show.toLocaleString(lang),m.n_all.toLocaleString(lang),m.m_all.toLocaleString(lang));
+  renderComs(); renderDetail();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>{lang=b.dataset.l;try{localStorage.setItem("tsag-lang",lang)}catch(e){};applyLang()});
+document.getElementById("all").onclick=()=>{DATA.communities.forEach(c=>active.add(c.id));renderComs();r.refresh()};
+document.getElementById("none").onclick=()=>{active.clear();renderComs();r.refresh()};
+const norm=s=>s.toLocaleLowerCase("tr").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ı/g,"i");
+const idx=DATA.nodes.map(n=>[norm(n.label),n.id,n.label]);
+const q=document.getElementById("q"), sug=document.getElementById("sug"); let cur=[],ai=-1;
+q.oninput=()=>{const v=norm(q.value.trim()); if(!v){sug.style.display="none";return}
+  cur=idx.filter(x=>x[0].includes(v)).slice(0,12); ai=-1;
+  sug.innerHTML=cur.map((x,i)=>`<div data-k="${i}">${esc(x[2])}</div>`).join(""); sug.style.display=cur.length?"block":"none";
+  sug.querySelectorAll("div").forEach(d=>d.onclick=()=>{pick(+d.dataset.k)})};
+q.onkeydown=e=>{ if(!cur.length)return;
+  if(e.key==="ArrowDown"){ai=(ai+1)%cur.length}else if(e.key==="ArrowUp"){ai=(ai-1+cur.length)%cur.length}else if(e.key==="Enter"){pick(ai<0?0:ai);return}else return;
+  e.preventDefault(); sug.querySelectorAll("div").forEach((d,i)=>d.classList.toggle("act",i===ai))};
+function pick(k){const x=cur[k]; if(!x)return; q.value=x[2]; sug.style.display="none"; select(x[1],true)}
+document.addEventListener("click",e=>{if(!e.target.closest(".search"))sug.style.display="none"});
+applyLang();
+</script>
+</body>
+</html>

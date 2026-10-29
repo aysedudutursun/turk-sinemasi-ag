@@ -1,0 +1,102 @@
+{
+  "temel": {
+    "dugum": 2070,
+    "kenar": 16073,
+    "yogunluk": 0.007505784726454237,
+    "ortalama_derece": 15.529468599033816,
+    "medyan_derece": 10.0,
+    "maks_derece": 239,
+    "izole_dugum": 87,
+    "bilesen_sayisi": 125,
+    "dev_bilesen_dugum": 1795,
+    "dev_bilesen_kenar": 14744,
+    "dev_bilesen_payi": 0.8671497584541062,
+    "ikinci_bilesen_dugum": 44,
+    "ortalama_en_kisa_yol_gc": 3.442049170400872,
+    "cap_gc": 8,
+    "yol_tam_hesap": true,
+    "global_kumelenme_transitivity": 0.3933333823670023,
+    "ortalama_yerel_kumelenme": 0.6924172477599261,
+    "derece_assortativity": 0.03817542276358759
+  },
+  "derece_dagilimi": {
+    "alpha": 2.608244049139989,
+    "xmin": 16,
+    "sigma_alpha": 0.06039887305940837,
+    "kuyruktaki_dugum": 709,
+    "karsilastirma": {
+      "lognormal": {
+        "R": -4.861284193481102,
+        "p": 1.166266775569655e-06,
+        "yorum": "lognormal daha iyi"
+      },
+      "exponential": {
+        "R": -2.5771072931254344,
+        "p": 0.009963101973630064,
+        "yorum": "exponential daha iyi"
+      },
+      "truncated_power_law": {
+        "R": -4.7419613106236636,
+        "p": 0.0,
+        "yorum": "truncated_power_law daha iyi"
+      },
+      "stretched_exponential": {
+        "R": -4.832983309241571,
+        "p": 1.34502067817843e-06,
+        "yorum": "stretched_exponential daha iyi"
+      }
+    },
+    "lognormal_mu": 2.762186287798931,
+    "lognormal_sigma": 0.7691481943472416
+  },
+  "spearman": {
+    "derece": {
+      "derece": 1.0,
+      "betweenness": 0.6626,
+      "closeness": 0.7495,
+      "eigenvector": 0.8321,
+      "pagerank": 0.9584,
+      "film_sayisi": 0.594
+    },
+    "betweenness": {
+      "derece": 0.6626,
+      "betweenness": 1.0,
+      "closeness": 0.6651,
+      "eigenvector": 0.608,
+      "pagerank": 0.7237,
+      "film_sayisi": 0.9219
+    },
+    "closeness": {
+      "derece": 0.7495,
+      "betweenness": 0.6651,
+      "closeness": 1.0,
+      "eigenvector": 0.9443,
+      "pagerank": 0.6584,
+      "film_sayisi": 0.6216
+    },
+    "eigenvector": {
+      "derece": 0.8321,
+      "betweenness": 0.608,
+      "closeness": 0.9443,
+      "eigenvector": 1.0,
+      "pagerank": 0.7206,
+      "film_sayisi": 0.5631
+    },
+    "pagerank": {
+      "derece": 0.9584,
+      "betweenness": 0.7237,
+      "closeness": 0.6584,
+      "eigenvector": 0.7206,
+      "pagerank": 1.0,
+      "film_sayisi": 0.6407
+    },
+    "film_sayisi": {
+      "derece": 0.594,
+      "betweenness": 0.9219,
+      "closeness": 0.6216,
+      "eigenvector": 0.5631,
+      "pagerank": 0.6407,
+      "film_sayisi": 1.0
+    }
+  }
+}

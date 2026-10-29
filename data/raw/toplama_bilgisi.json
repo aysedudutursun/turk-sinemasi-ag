@@ -1,0 +1,16 @@
+{
+  "toplama_zamani_utc": "2026-10-29T18:19:25+00:00",
+  "kaynak": "https://query.wikidata.org/sparql",
+  "lisans": "Wikidata verisi CC0 1.0 (kamu malı) lisanslıdır",
+  "film_tanimi": "P31/P279* Q11424 ve P495 = Q43",
+  "yil_araligi": [
+    1950,
+    2025
+  ],
+  "film_sayisi_tum": 3652,
+  "film_sayisi_yilli_aralikta": 2961,
+  "yili_olmayan_film": 602,
+  "p161_olan_film": 1954,
+  "film_oyuncu_satiri": 6099,
+  "benzersiz_oyuncu": 2070
+}

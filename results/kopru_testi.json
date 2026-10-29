@@ -1,0 +1,84 @@
+{
+  "temel": {
+    "gc": 1795,
+    "L": 3.442049170400872
+  },
+  "tekli": [
+    {
+      "ad": "Cüneyt Arkın",
+      "gc": 1794,
+      "kopan": 0,
+      "L": 3.508358095181248,
+      "L_degisim": 0.06630892478037609
+    },
+    {
+      "ad": "Şener Şen",
+      "gc": 1794,
+      "kopan": 0,
+      "L": 3.4574783267768066,
+      "L_degisim": 0.01542915637593456
+    },
+    {
+      "ad": "Türkân Şoray",
+      "gc": 1794,
+      "kopan": 0,
+      "L": 3.4577761528948514,
+      "L_degisim": 0.015726982493979413
+    },
+    {
+      "ad": "Haluk Bilginer",
+      "gc": 1786,
+      "kopan": 8,
+      "L": 3.4494302088136486,
+      "L_degisim": 0.007381038412776597
+    },
+    {
+      "ad": "Güven Kıraç",
+      "gc": 1794,
+      "kopan": 0,
+      "L": 3.4516194217447884,
+      "L_degisim": 0.009570251343916425
+    }
+  ],
+  "birlikte": [
+    {
+      "k": 1,
+      "adlar": [
+        "Cüneyt Arkın"
+      ],
+      "gc": 1794,
+      "kopan": 0,
+      "L": 3.508358095181248,
+      "rastgele_kopan_ort": 0.14,
+      "rastgele_L_ort": 3.4421194746076433
+    },
+    {
+      "k": 3,
+      "adlar": [
+        "Cüneyt Arkın",
+        "Şener Şen",
+        "Türkân Şoray"
+      ],
+      "gc": 1792,
+      "kopan": 0,
+      "L": 3.5442328208502833,
+      "rastgele_kopan_ort": 0.54,
+      "rastgele_L_ort": 3.442501103569538
+    },
+    {
+      "k": 5,
+      "adlar": [
+        "Cüneyt Arkın",
+        "Şener Şen",
+        "Türkân Şoray",
+        "Haluk Bilginer",
+        "Güven Kıraç"
+      ],
+      "gc": 1782,
+      "kopan": 8,
+      "L": 3.5628642781927455,
+      "rastgele_kopan_ort": 0.8,
+      "rastgele_L_ort": 3.442716837826101
+    }
+  ]
+}
