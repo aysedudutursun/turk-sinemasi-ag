@@ -12,7 +12,7 @@ Wikidata'daki 2.070 oyuncu ve 16.073 ortak film bağından kurulan Türk sinemas
 > **Zamansal küçük dünya ağ analizi:** Wikidata SPARQL ile 2.070 oyuncu ve 16.073 bağlık Türk sineması oyuncu ağını kurdum. On yıllık ağlarda σ ve ω katsayılarıyla küçük dünya yapısını, Louvain/Leiden topluluklarını ve 100 rastgele ağlık null modeli Python (igraph, leidenalg, powerlaw) ile test ettim, sonuçları Sigma.js tabanlı etkileşimli bir ağla yayımladım.
 
 ## Çıktılar
-- **Etkileşimli ağ:** `docs/index.html`. Arama, detay paneli, topluluk filtresi ve TR/EN var. Tek dosyadır, kütüphaneler içine gömülüdür. GitHub Pages ile (Settings → Pages → `docs/` klasörü) yayımlanabilir. Link: _(GitHub Pages / portfolyo linkini buraya ekle)_
+- **Etkileşimli ağ:** `docs/index.html`. Arama, detay paneli, topluluk filtresi ve TR/EN var. Tek dosyadır, kütüphaneler içine gömülüdür. GitHub Pages ile (Settings → Pages → `docs/` klasörü) yayımlanabilir. Link:(https://aysedudutursun.github.io/turk-sinemasi-ag/docs/)
 - **A3 poster:** `figures/poster_A3.pdf`
 - **Defter:** `analiz.ipynb`. Tüm adımları sırayla çalıştırır ve sonuçları gösterir.
 - **Kenar listesi ve GraphML:** `data/processed/kenar_listesi.csv`, `data/processed/oyuncu_agi.graphml`, `data/processed/iki_parcali_ag.graphml`
